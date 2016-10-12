@@ -225,14 +225,13 @@ Let's see all of this with a few examples based on this `package.json`:
 
 ```json
 {
-    ...
     "dependencies": {
-        "jest-cli": 1.0.0,
-        "node-fetch": 1.0.0
+        "jest-cli": "1.0.0",
+        "node-fetch": "1.0.0"
     },
     "devDependencies": {
-        "webpack": 1.0.0,
-        "webpack-middleware": 1.0.0
+        "webpack": "1.0.0",
+        "webpack-middleware": "1.0.0"
     }
 }
 ```
