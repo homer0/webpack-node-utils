@@ -1,5 +1,7 @@
 # Webpack Node Utils
 
+[![Build Status](https://travis-ci.org/homer0/webpack-node-utils.svg?branch=master)](https://travis-ci.org/homer0/webpack-node-utils) [![Coverage Status](https://coveralls.io/repos/homer0/webpack-node-utils/badge.svg?branch=master&service=github)](https://coveralls.io/github/homer0/webpack-node-utils?branch=master) [![Documentation Status](https://doc.esdoc.org/github.com/homer0/webpack-node-utils/badge.svg)](https://doc.esdoc.org/github.com/homer0/webpack-node-utils/) [![Dependencies status](https://david-dm.org/homer0/webpack-node-utils.svg)](https://david-dm.org/homer0/webpack-node-utils) [![Dev dependencies status](https://david-dm.org/homer0/webpack-node-utils/dev-status.svg)](https://david-dm.org/homer0/webpack-node-utils#info=devDependencies)
+
 A set of utility methods that for a better experience building Node applications using [Webpack](https://webpack.github.io).
 
 ## The motivation
