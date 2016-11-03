@@ -23,7 +23,7 @@
         "eslint-plugin-react": "6.3.0",
         "eslint-plugin-import": "1.16.0",
 
-        "jest-cli": "16.0.0",
+        "jest-cli": "16.0.2",
         "esdoc": "0.4.8",
         "esdoc-es7-plugin": "0.0.3",
         "esdoc-uploader": "1.0.1",

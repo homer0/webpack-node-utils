@@ -137,10 +137,10 @@ class WebpackNodeUtils {
                 result[pckg] = `commonjs ${pckg}`;
             }
         });
+
         if (extras) {
             Object.keys(extras).forEach((name) => {
-                const extraPath = path.join(rootPath, extras[name]);
-                result[name] = `commonjs ${extraPath}`;
+                result[name] = `commonjs ${extras[name]}`;
             });
         }
 
