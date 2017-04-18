@@ -12,6 +12,7 @@ const rootPath = process.cwd();
  * configuration files, generate the list of external dependencies from your
  * `package.json`, do dynamic requires on runtime and read files without even knowing
  * where the bundle is located.
+ * @class
  */
 class WebpackNodeUtils {
     /**
