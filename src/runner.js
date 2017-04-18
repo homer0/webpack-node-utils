@@ -8,6 +8,7 @@ const colors = require('colors/safe');
 /**
  * This is a Webpack plugin for Node apps that allows the developer to start/stop the bundle
  * execution while Webpack _watches_ the files.
+ * Based on https://github.com/ericclemmons/start-server-webpack-plugin.
  * @class
  */
 class WebpackNodeUtilsRunner {

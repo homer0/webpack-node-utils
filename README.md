@@ -12,8 +12,9 @@ The moment we started building universal applications we found a few issues that
 - No dynamic `require`.
 - The relative paths we needed to read some files on runtime changed because the bundle wasn't located on the same place the module that needed to read was.
 - We had to define the production dependencies as `externals`, otherwise Webpack would try to put everything on the bundle.
+- Because I needed the backend build to run a server, I couldn't use `--watch` on the same tab.
 
-So we built workarounds, but those workarounds were attached to the project where they were created, so moving them involving copy&paste, and for something this generic, having them on a module made more sense.
+So we built workarounds, but those workarounds were attached to the project where they were created, so moving them involved a lot of copy&paste, and for something this generic, having them on a module made more sense.
 
 ## Information
 
@@ -291,6 +292,31 @@ webpackNodeUtils.externals({}, false, [], ['node-fetch']);
  *  }
  */
 ```
+
+### Running the backend build with the watch flag
+
+One of the issues we had while building both backend and frontend with Webpack was that we couldn't use the `--watch` flag for the backend without having to open another terminal, because Webpack stops on the watch and whatever comes next doesn't get executed. One of the solutions we tried was to use [nodemon](https://www.npmjs.com/package/nodemon) to watch the backend and restart the necessary task when the files change, but that also means that Webpack needs to be restarted too, which may take a few seconds (more if the task you use is hooked to other things, like cleaning the build folder for example). Now, the magic of Webpack watching the files is that it doesn't need to be restarted and the change happens almost immediately (in most cases :P).
+
+We did some research and we found [start-server-webpack-plugin](https://github.com/ericclemmons/start-server-webpack-plugin), which uses the `cluster` module to start a server when Webpack finishes loading; which is great, but not entirely what we wanted, so we built a small plugin based on that:
+
+`WebpackNodeUtilsRunner` receives an entry name and it takes care of executing the build once Webpack finishes, and if Webpack needs to rebuild, it stops the build process, waits for Webpack to finish again and restart the build.
+
+All you have to do is to include it on your Webpack configuration:
+
+```js
+// File: ./.webpack/backend.dev.js
+const WebpackNodeUtilsRunner = require('webpack-node-utils').WebpackNodeUtilsRunner;
+
+module.exports = () => ({
+    extends: 'base',
+    entry: {...},
+    output: {...},
+    plugins: [
+        new WebpackNodeUtilsRunner('your-backend-asset-name'),
+    ],
+});
+```
+> Yes, the example uses the syntax we use for handling multiple configurations, but that's not required.
 
 For more information, check the technical documentation.
 
