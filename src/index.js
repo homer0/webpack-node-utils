@@ -5,12 +5,14 @@
 const path = require('path');
 const fs = require('fs');
 const merge = require('webpack-merge');
+const WebpackNodeUtilsRunner = require('./runner');
 const rootPath = process.cwd();
 /**
  * The module's core: A set of static methods that allows you to manage multiple Webpack
  * configuration files, generate the list of external dependencies from your
  * `package.json`, do dynamic requires on runtime and read files without even knowing
  * where the bundle is located.
+ * @class
  */
 class WebpackNodeUtils {
     /**
@@ -210,3 +212,4 @@ class WebpackNodeUtils {
 }
 
 module.exports = WebpackNodeUtils;
+module.exports.WebpackNodeUtilsRunner = WebpackNodeUtilsRunner;

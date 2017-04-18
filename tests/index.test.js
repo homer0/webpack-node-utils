@@ -1,4 +1,4 @@
-/* eslint strict: 0, global-require: 0, new-cap: 0 */
+/* eslint global-require: 0, new-cap: 0 */
 
 jest.unmock('../src/index');
 jest.unmock('fs');

@@ -5,10 +5,11 @@
     "collectCoverage": true,
     "coverageDirectory": "coverage",
     "testRegex": "\\.test\\.js$",
-    "unmockedModulePathPatterns": ["mocks"],
+    "unmockedModulePathPatterns": ["mocks", "colors"],
     "coveragePathIgnorePatterns": ["/node_modules/", "/mocks/"],
     "clearMocks": true,
     "moduleNameMapper": {
         "package\\.json$": "<rootDir>/tests/mocks/package.js"
-    }
+    },
+    "testEnvironment": "node"
 }
