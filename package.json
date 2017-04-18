@@ -12,7 +12,8 @@
         "universal"
     ],
     "dependencies": {
-        "webpack-merge": "0.14.0"
+        "webpack-merge": "0.14.0",
+        "colors": "1.1.2"
     },
     "devDependencies": {
         "eslint": "3.7.1",
@@ -24,6 +25,7 @@
         "eslint-plugin-import": "1.16.0",
 
         "jest-cli": "16.0.2",
+        "jasmine-expect": "3.7.0",
         "esdoc": "0.4.8",
         "esdoc-es7-plugin": "0.0.3",
         "esdoc-uploader": "1.0.1",

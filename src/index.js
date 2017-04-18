@@ -5,6 +5,7 @@
 const path = require('path');
 const fs = require('fs');
 const merge = require('webpack-merge');
+const WebpackNodeUtilsRunner = require('./runner');
 const rootPath = process.cwd();
 /**
  * The module's core: A set of static methods that allows you to manage multiple Webpack
@@ -210,3 +211,4 @@ class WebpackNodeUtils {
 }
 
 module.exports = WebpackNodeUtils;
+module.exports.WebpackNodeUtilsRunner = WebpackNodeUtilsRunner;

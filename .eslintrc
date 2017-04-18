@@ -8,7 +8,10 @@
         "no-param-reassign": 0,
         "no-new": 0,
         "import/newline-after-import": 0,
-        "import/no-dynamic-require": 0
+        "import/no-dynamic-require": 0,
+        "import/no-extraneous-dependencies": 0,
+        "strict": 0,
+        "no-plusplus": 0
     },
     "globals": {
         "window": true,
@@ -28,6 +31,7 @@
         "by": true,
         "isAngularSite": true,
         "protractor": true,
-        "element": true
+        "element": true,
+        "jasmine": true
     }
 }
