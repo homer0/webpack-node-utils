@@ -1,0 +1,12 @@
+{
+  "automock": true,
+  "unmockedModulePathPatterns": ["/node_modules/", "/mocks/", "colors"],
+  "coveragePathIgnorePatterns": ["/node_modules/", "/mocks/"],
+  "moduleNameMapper": {
+    "package\\.json$": "<rootDir>/tests/mocks/package.js"
+  },
+  "collectCoverage": true,
+  "timers": "fake",
+  "clearMocks": true,
+  "testEnvironment": "node"
+}
