@@ -1,37 +1,22 @@
 {
-    "extends": ["airbnb"],
-    "rules": {
-        "comma-dangle": ["error", "always-multiline"],
-        "indent": ["error", 4],
-        "no-extra-bind": 0,
-        "no-underscore-dangle": ["error", { "allowAfterThis": true }],
-        "no-param-reassign": 0,
-        "no-new": 0,
-        "import/newline-after-import": 0,
-        "import/no-dynamic-require": 0,
-        "import/no-extraneous-dependencies": 0,
-        "strict": 0,
-        "no-plusplus": 0
-    },
-    "globals": {
-        "window": true,
-        "Promise": true,
-        "process": true,
-        "console": true,
-        "jest": true,
-        "it": true,
-        "describe": true,
-        "expect": true,
-        "pit": true,
-        "spyOn": true,
-        "afterEach": true,
-        "beforeEach": true,
-        "browser": true,
-        "angular": true,
-        "by": true,
-        "isAngularSite": true,
-        "protractor": true,
-        "element": true,
-        "jasmine": true
-    }
+  "extends": "airbnb-base",
+  "rules": {
+    indent: ['error', 2, {
+      MemberExpression: 0,
+    }],
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "comma-dangle": ["error", {
+      arrays: "always-multiline",
+      objects: "always-multiline",
+      imports: "always-multiline",
+      exports: "always-multiline",
+      functions: "never",
+    }],
+    "class-methods-use-this": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    "function-paren-newline": "off",
+    "arrow-parens": ["error", "always"],
+    "no-plusplus": "off"
+  }
 }
