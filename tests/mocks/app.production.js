@@ -1,9 +1,9 @@
 module.exports = () => ({
-    extends: 'base',
-    name: 'app-production',
+  extends: 'base',
+  name: 'app-production',
 });
 
-module.exports.custom = params => ({
-    name: 'app-production-custom',
-    params,
+module.exports.custom = (params) => ({
+  name: 'app-production-custom',
+  params,
 });

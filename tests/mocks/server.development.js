@@ -1,8 +1,8 @@
 module.exports = () => ({
-    name: 'server-development',
+  name: 'server-development',
 });
 
 module.exports.library = () => ({
-    extends: 'base',
-    name: 'server-development-commonjs',
+  extends: 'base',
+  name: 'server-development-commonjs',
 });
