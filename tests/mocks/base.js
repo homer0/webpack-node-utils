@@ -1,4 +1,4 @@
 module.exports = () => ({
-    name: 'base',
-    fromBase: true,
+  name: 'base',
+  fromBase: true,
 });

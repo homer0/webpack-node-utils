@@ -22,7 +22,7 @@ So we built workarounds, but those workarounds were attached to the project wher
 |--------------|--------------------------------------------------------------------|
 | Package      | webpack-node-utils                                                 |
 | Description  | A set of utility methods to help you build Node apps with Webpack. |
-| Node Version | >= v4.3.0                                                          |
+| Node Version | >= v6.0.0                                                          |
 
 ## Usage
 
@@ -90,7 +90,7 @@ const defaultSetup = module.exports = () => ({
     extends: 'base',
     entry: {...},
     output: {...},
-    plugins: {...},    
+    plugins: {...},
 });
 
 module.exports.library = (params) => {
